@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>page1</title>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    </head>
+    <body bgcolor="blue" text ="white">
+        
+        <h1 id="main">
+           RICH GUY WILL HIDE HIMSELF FROM THE INTERNET.PERIOD.
+            
+        </h1>
+        
+        <div id='f'>
+            
+        </div>
+        
+        
+    </body>
+    
+    <style>
+        
+        
+        *{
+    
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+
+body{
+    
+    margin:0;
+    height: 100vh;
+    
+    
+    font-size:2em;
+        font-family: "Montserrat";
+    
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+        #main{
+      
+padding:100px;            
+        }
+        
+        
+        
+    </style>
+    
+    
+    
+    <script>
+    let degree=0;
+        
+    let m =document.getElementById('main');
+    
+        function rotateText(){
+            
+                m.style.transform="rotate("+degree+"deg)";
+            degree++;
+            
+            if(degree>359){degree=1;}
+        }
+    
+   setInterval(rotateText,1000);
+
+    
+    
+    
+    </script>
+    
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>multiple pages</title>
+    </head>
+    
+
+    
+
+<script type='text/javascript'>
+function myFunction() {
+  setTimeout(function(){ parent.a_frame.location='page3.html'; parent.b_frame.location='page22.html' }, 30000);
+     setTimeout(function(){ parent.a_frame.location='page5.html'; parent.b_frame.location='page23.html' }, 60000);
+     setTimeout(function(){ parent.a_frame.location='page7.html'; parent.b_frame.location='page24.html' }, 90000);
+     setTimeout(function(){ parent.a_frame.location='page1.html'; parent.b_frame.location='page2.html' }, 120000);
+}
+    
+    myFunction();
+    
+</script>
+    
+        <frameset cols="50%,50%">
+        
+   <frame src="page1.html" name='a_frame'>
+
+                <frame src="page2.html" name='b_frame'>
+
+    </frameset>
+    
+    
+    
+    
+    </html>

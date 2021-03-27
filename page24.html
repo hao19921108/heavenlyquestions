@@ -1,0 +1,91 @@
+<html>
+<head>
+    <title>page1</title>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    
+    </head>
+    <body bgcolor="purple" text ="yellow">
+        
+   <h1 class="ml13">Truth is dead.<br>Truth is Unsearchable</h1>
+
+        
+    </body>
+    
+    <style>
+        
+        
+        *{
+    
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+        
+        
+   .ml13 {
+  font-size: 1.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-weight: 600;
+       
+       padding-top: 5.0em;
+}
+
+.ml13 .letter {
+  display: inline-block;
+  line-height: 1em;
+}    
+
+
+body{
+    
+    margin:0;
+    height: 100vh;
+    
+    font-size:2em;
+        font-family: "Montserrat";
+    
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+      
+        
+        
+    </style>
+    
+    
+    
+    <script>
+        
+        
+  var textWrapper = document.querySelector('.ml13');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml13 .letter',
+    translateY: [100,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1400,
+    delay: (el, i) => 300 + 30 * i
+  }).add({
+    targets: '.ml13 .letter',
+    translateY: [0,-100],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1200,
+    delay: (el, i) => 100 + 30 * i
+  });
+        
+    </script>
+    
+</html>
